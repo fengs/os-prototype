@@ -26,5 +26,5 @@ mov al, 'A'
 int 0x10
 
 jmp $ ; jump to the current address
-times 510-($-$$) db0 ; pad 510 zeroes in the boot sector
+times 510-($-$$) db 0 ; pad 510 zeroes in the boot sector
 dw 0xaa55 ; magic number at last two bytes
